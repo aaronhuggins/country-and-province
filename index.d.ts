@@ -12,6 +12,7 @@ declare module 'country-and-province' {
 
     byName(name: string): Province
     byCode(code: string): Province
+    byNameOrCode(nameOrCode: string): Province
 
     static data: Province[]
 

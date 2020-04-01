@@ -1,6 +1,6 @@
 {
   "name": "country-and-province",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A library for ISO Country and Province data, wrapping two npm modules in an easy-to-use API.",
   "main": "index.js",
   "types": "index.d.ts",
