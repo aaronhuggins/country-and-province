@@ -54,6 +54,12 @@ class Provinces {
     return new Province(this.data.find((val) => compareExact(code, val.code)))
   }
 
+  byNameOrCode(nameOrCode) {
+    return new Province(this.data.find((val) => {
+      return compareExact(nameOrCode, val.name) || alternateNameSearch(nameOrCode, val.alt) || compareExact(nameOrCode, val.code)
+    }))
+  }
+
   static get data () {
     return provinceData
   }
