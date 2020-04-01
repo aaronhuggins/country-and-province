@@ -31,6 +31,7 @@ declare module 'country-and-province' {
 
     provinceByName(name: string): Province
     provinceByCode(code: string): Province
+    provinceByNameOrCode(nameOrCode: string): Province
   }
 
   class Province {

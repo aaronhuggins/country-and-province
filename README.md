@@ -48,6 +48,7 @@ console.log(new Country('Spain').provinceByCode('CA')) // Province class for Cá
   - alt?: []
   - provinceByName(name: string): Province
   - provinceByCode(code: string): Province
+  - provinceByNameOrCode(nameOrCode: string): Province
 
 ### class Province
 - new Province(nameOrCode: string)

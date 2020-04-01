@@ -27,13 +27,13 @@ class Countries {
     return countryData
   }
 
-  static byName(name) {
+  static byName (name) {
     return new Country(this.data.find((val) => {
       return compareExact(name, val.name) || alternateNameSearch(name, val.alt)
     }))
   }
 
-  static byCode(code) {
+  static byCode (code) {
     return new Country(this.data.find((val) => compareExact(code, val.code)))
   }
 }
@@ -50,11 +50,11 @@ class Provinces {
     }))
   }
 
-  byCode(code) {
+  byCode (code) {
     return new Province(this.data.find((val) => compareExact(code, val.code)))
   }
 
-  byNameOrCode(nameOrCode) {
+  byNameOrCode (nameOrCode) {
     return new Province(this.data.find((val) => {
       return compareExact(nameOrCode, val.name) || alternateNameSearch(nameOrCode, val.alt) || compareExact(nameOrCode, val.code)
     }))
@@ -64,13 +64,13 @@ class Provinces {
     return provinceData
   }
 
-  static byName(name) {
+  static byName (name) {
     return new Province(this.data.find((val) => {
       return compareExact(name, val.name) || alternateNameSearch(name, val.alt)
     }))
   }
 
-  static byCode(code) {
+  static byCode (code) {
     return new Province(this.data.find((val) => compareExact(code, val.code)))
   }
 
@@ -102,12 +102,16 @@ class Country {
     }
   }
 
-  provinceByName(name) {
+  provinceByName (name) {
     return this.provinces.byName(name)
   }
 
-  provinceByCode(code) {
+  provinceByCode (code) {
     return this.provinces.byCode(code)
+  }
+
+  provinceByNameOrCode (nameOrCode) {
+    return this.provinces.byNameOrCode(nameOrCode)
   }
 }
 
