@@ -1,8 +1,9 @@
-const countries = require('country-list')
+const countries = require('country-list/data.json')
 const countryAlts = require('./country-alts.json')
-const provinces = require('provinces')
+const provinces = require('provinces/provinces.json')
 
-const countryData = countries.getData().map((val) => {
+// Map additional data and conform data to standard format
+const countryData = countries.map((val) => {
   return Object.assign({ alt: countryAlts[val.code] }, val)
 })
 const provinceData = provinces.map((val) => {
@@ -15,6 +16,7 @@ const provinceData = provinces.map((val) => {
   }
 })
 
+// Helper functions
 const compareExact = function compareExact(word1, word2) {
   return word1 !== undefined && word2 !== undefined && word1.toLowerCase() === word2.toLowerCase()
 }
@@ -22,6 +24,7 @@ const alternateNameSearch = function alternateNameSearch (word, words) {
   return word !== undefined && words !== undefined && words.find((val) => val.toLowerCase() === word.toLowerCase()) !== undefined
 }
 
+// Classes
 class Countries {
   static get data () {
     return countryData
