@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2020",
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "strict": false,
+    "declaration": true
+  },
+  "exclude": ["dist", "test", "gulpfile.ts"]
+}
