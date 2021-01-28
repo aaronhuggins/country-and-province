@@ -16,7 +16,7 @@ console.log(new Country('CA')) // Expected output: Country class with data for C
 
 console.log(Provinces.byCode('QC')) // Province class for Quebec, Canada
 console.log(new Province('CA')) // Province class for California, United States
-console.log(new Province('Newfoundland')) // Province class for California, United States
+console.log(new Province('Newfoundland')) // Province class for Newfoundland, Canada
 
 console.log(new Country('Spain').provinceByCode('CA')) // Province class for Cádiz, Spain
 
