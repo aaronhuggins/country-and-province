@@ -8,5 +8,5 @@
     "strict": false,
     "declaration": true
   },
-  "exclude": ["dist", "gulpfile.ts"]
+  "exclude": ["dist", "test", "gulpfile.ts"]
 }
