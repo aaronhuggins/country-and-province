@@ -16,11 +16,11 @@
     "url": "https://github.com/ahuggins-nhs/country-and-province.git"
   },
   "keywords": [
-    "azure",
-    "table",
-    "storage",
-    "row",
-    "document"
+    "country",
+    "province",
+    "state",
+    "iso3166",
+    "data"
   ],
   "author": "Aaron Huggins",
   "license": "MIT",
